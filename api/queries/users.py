@@ -178,17 +178,16 @@ class UserRepository:
                                 , first_name = %s
                                 , last_name = %s
                                 , email = %s
-                                , user_id = %s
                             WHERE id = %s
                             RETURNING *;
                             """,
                         [
-                            user_id,
                             user_edit.username,
                             hashed_password,
                             user_edit.first_name,
                             user_edit.last_name,
                             user_edit.email,
+                            user_id
                         ],
                     )
                     # print("insert worked?")
@@ -197,9 +196,9 @@ class UserRepository:
                     return UserOut(
                         id=updated[0],
                         username=updated[1],
-                        first_name=updated[2],
-                        last_name=updated[3],
-                        email=updated[4],
+                        first_name=updated[3],
+                        last_name=updated[4],
+                        email=updated[5],
                     )
         except Exception:
             return {"message": "Could not update"}
