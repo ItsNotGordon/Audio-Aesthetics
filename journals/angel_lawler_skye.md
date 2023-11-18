@@ -1,7 +1,5 @@
 ### Angel's Engineer Journal
 
-### Angel's Engineer Journal
-
 ## November 17, 2023
 
 Today, we mob programmed to:
