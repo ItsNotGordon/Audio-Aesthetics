@@ -1,5 +1,15 @@
 ### Angel's Engineer Journal
 
+## November 20, 2023
+
+Today, we mob programmed to:
+
+-try to add protection to our existing endpoints in line with project requirements.
+
+Previously, I thought that all authorization would be handled on the front-end with the only backend authentication being login/logout but now I think my understanding is that we need to all have created at least 2 protected endpoints for our grade.
+
+Currently trying to find a modular way to update all existing endpoints to redirect any users who aren't logged in back to login page as part of our endpoint protection but at minimum need to make sure I add protection and test it to the endpoints I created on Nov 17.
+
 ## November 17, 2023
 
 Today, we mob programmed to:
