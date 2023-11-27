@@ -115,7 +115,7 @@ steps = [
             name VARCHAR(100) NOT NULL,
             img_url VARCHAR(255) DEFAULT 'https://tinyurl.com/Dimg-url',
             is_public BOOLEAN DEFAULT TRUE,
-            songs JSONB
+            songs JSONB,
             PRIMARY KEY (user_id, playlist_id),
             FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
         );
@@ -126,11 +126,11 @@ steps = [
     ],
 ]
 
-        # CREATE TABLE memberships (
-        #     user_id INT NOT NULL,
-        #     group_id INT NOT NULL,
-        #     PRIMARY KEY (user_id, group_id),
-        #     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-        #     FOREIGN KEY (group_id) REFERENCES groups(id)
-        # );
-        # """,
+# CREATE TABLE memberships (
+#     user_id INT NOT NULL,
+#     group_id INT NOT NULL,
+#     PRIMARY KEY (user_id, group_id),
+#     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+#     FOREIGN KEY (group_id) REFERENCES groups(id)
+# );
+# """,
