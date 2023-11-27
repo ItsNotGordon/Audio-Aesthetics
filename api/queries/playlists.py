@@ -9,7 +9,6 @@ class Error(BaseModel):
 
 class PlaylistIn(BaseModel):
     name: str
-    created_by: str
     img_url: Optional[str] = "https://tinyurl.com/Dimg-url"
     is_public: bool = True
     songs: Optional[str]
@@ -18,7 +17,6 @@ class PlaylistIn(BaseModel):
 class PlaylistOut(BaseModel):
     id: int
     name: str
-    created_by: str
     img_url: Optional[str] = "https://tinyurl.com/Dimg-url"
     is_public: bool = True
     songs: Optional[str]
@@ -35,7 +33,7 @@ class PlaylistRespository:
                         """
                         SELECT *
                         FROM playlists
-                        WHERE created_by = %s
+                        WHERE user_id = %s
                         ORDER BY name;
                         """,
                         (user_id,),
