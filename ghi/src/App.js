@@ -6,6 +6,7 @@ import "./App.css";
 import Login from "./Login"
 import Homepage from "./Homepage"
 import Dashboard from "./Dashboard"
+import SpotifyProfile from "./SpotifyProfile";
 
 const code = new URLSearchParams(window.location.search).get('code')
 
@@ -14,7 +15,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <main>
-        <Homepage />
+        {/* <Homepage /> */}
         {/* <Login /> */}
         {/* Other Components */}
       </main>
