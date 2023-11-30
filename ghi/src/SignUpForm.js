@@ -1,31 +1,31 @@
 import { useState } from "react";
 import useToken from "@galvanize-inc/jwtdown-for-react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [first, setFirst] = useState("");
-  const [last, setLast] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const { register } = useToken();
   // const navigate = useNavigate();
 
   const handleRegistration = (e) => {
     e.preventDefault();
-    const accountData = {
+    const userData = {
       username: username,
       password: password,
-      first: first,
-      last: last,
+      first_name: first_name,
+      last_name: last_name,
       email: email,
     };
     register(
-      accountData,
-      `${process.env.REACT_APP_USER_SERVICE_API_HOST}/api/users`
+      userData,
+      `${process.env.REACT_APP_API_HOST}/api/users`,
+      e.target.reset()
     );
-    e.target.reset();
-    // navigate("/");
+    // navigate("/api/users");
   };
 
   return (
@@ -56,24 +56,24 @@ const SignupForm = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">first</label>
+            <label className="form-label">first name</label>
             <input
-              name="first"
+              name="first_name"
               type="text"
               className="form-control"
               onChange={(e) => {
-                setFirst(e.target.value);
+                setFirstName(e.target.value);
               }}
             />
           </div>
           <div className="mb-3">
             <label className="form-label">last</label>
             <input
-              name="last"
+              name="last_name"
               type="text"
               className="form-control"
               onChange={(e) => {
-                setLast(e.target.value);
+                setLastName(e.target.value);
               }}
             />
           </div>
