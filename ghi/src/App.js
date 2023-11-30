@@ -6,6 +6,8 @@ import "./App.css";
 import Login from "./Login"
 import Homepage from "./Homepage"
 import Dashboard from "./Dashboard"
+import Account from "./Account";
+import SignIn from "./SignIn";
 
 const code = new URLSearchParams(window.location.search).get('code')
 
@@ -14,7 +16,9 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <main>
-        <Homepage />
+        {/* <Homepage /> */}
+        <SignIn />
+        <Account />
         {/* <Login /> */}
         {/* Other Components */}
       </main>
