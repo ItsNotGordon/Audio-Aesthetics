@@ -9,6 +9,7 @@ const SpotifyProfile = () => {
     const { token } = useToken();
 
     useEffect(() => {
+        console.log(token)
         fetch('http://localhost:8000/spotify/user/profile', {
             headers: {
                 'Authorization': `Bearer ${token}`
