@@ -7,6 +7,7 @@ import Logout from "./Logout";
 
 import SignupForm from "./SignupForm";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
+import SpotifyProfile from "./SpotifyProfile";
 
 function App() {
   const baseUrl = "http://localhost:8000";
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/signin" element={<SignIn />}></Route>
           <Route exact path="/logout" element={<Logout />}></Route>
           <Route exact path="/signup" element={<SignupForm />}></Route>
+          <Route exact path="/spotify/profile" element={<SpotifyProfile />}></Route>
         </Routes>
       </AuthProvider>
     </BrowserRouter>
