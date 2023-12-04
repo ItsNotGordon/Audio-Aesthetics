@@ -42,7 +42,7 @@ build-api-image:
     - docker build --tag $GITLAB_IMAGE:latest ./api
     - docker push $GITLAB_IMAGE:latest
   only:
-    - backend-deployment
+    - main
 # # Build the React/JavaScript front-end
 # build-front-end-job:
 #   stage: build
