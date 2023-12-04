@@ -18,6 +18,13 @@ app.add_middleware(
 )
 
 
+# added this in the steps of backend deployment - Angel
+@app.get("/")
+def root():
+    return {"message": "You hit the root path!"}
+# fin - Angel 
+
+
 # @app.get("/api/launch-details")
 # def launch_details():
 #     return {
