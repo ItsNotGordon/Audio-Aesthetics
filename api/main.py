@@ -8,6 +8,9 @@ from authenticator import authenticator
 app = FastAPI()
 app.include_router(authenticator.router)
 
+@app.get("/")
+def root():
+    return {"message": "You hit the root path!"}
 
 app.add_middleware(
     CORSMiddleware,
