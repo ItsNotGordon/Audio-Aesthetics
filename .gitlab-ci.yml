@@ -24,6 +24,11 @@ api-unit-tests-job:
     - cd api
     - pip install -r requirements.txt
     - python -m pytest
+  variables:
+    DATABASE_URL: ${DATABASE_URL}
+    SIGNING_KEY: ${SIGNING_KEY}
+    SPOTIFY_CLIENT_ID: ${SPOTIFY_CLIENT_ID}
+    SPOTIFY_CLIENT_SECRET: ${SPOTIFY_CLIENT_SECRET}
 # # Build API Image:
 # build-api-image:
 #   stage: build
