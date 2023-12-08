@@ -57,11 +57,10 @@ const SignupForm = () => {
 
     try {
       await register(userData, `${process.env.REACT_APP_API_HOST}/api/users`);
-      e.target.reset(); // Reset the form only if the registration is successful
+      e.target.reset();
       navigate("/explore");
     } catch (error) {
       console.error("Registration failed:", error);
-      // Handle the error (e.g., display an error message to the user)
     }
   };
 
