@@ -17,6 +17,7 @@ import Profile from "./Profile";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
 import Groups from "./Groups";
 import SpotifyPlayer from "./SpotifyPlayer";
+import MySpotifyComponent from "./MySpotifyComponent";
 
 function App() {
   const domain = /https:\/\/[^/]+/;
@@ -27,6 +28,7 @@ function App() {
     <BrowserRouter basename={basename}>
       <AuthProvider baseUrl={baseUrl}>
         <Routes>
+          <Route exact path="/test" element ={<MySpotifyComponent baseUrl={baseUrl}/>}></Route>
           <Route exact path="/" element={<ExplorePage baseUrl={baseUrl}/>}></Route>
           <Route exact path="/signin" element={<SignIn baseUrl={baseUrl}/>}></Route>
           <Route exact path="/logout" element={<Logout baseUrl={baseUrl}/>}></Route>

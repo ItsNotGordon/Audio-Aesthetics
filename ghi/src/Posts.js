@@ -131,7 +131,7 @@ export default function Posts() {
       let songOrPlaylistData = "";
       if (songOrPlaylist) {
         const spotifyResponse = await fetch(
-          `http://localhost:8000/spotify/search?query=${encodeURIComponent(songOrPlaylist)}`,{
+          `${process.env.REACT_APP_API_HOST}/spotify/search/track?query=${encodeURIComponent(songOrPlaylist)}`,{
             credentials: "include",
           }
         );
