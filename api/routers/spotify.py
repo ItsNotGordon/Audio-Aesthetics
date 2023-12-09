@@ -362,9 +362,10 @@ async def update_spotify_device(
     user_repo: UserRepository = Depends(),
 ):
     user_id = current_user["id"]
+
     user_repo.update_spotify_device_id(user_id, device_data.device_id)
 
-    return {"detail": "Spotify device ID updated successfully"}
+    return device_data.device_id
 
 
 @router.put("/spotify/play")
