@@ -218,7 +218,7 @@ async def update_playlist_details(
 
 
 @router.get("/spotify/search/track")
-async def search_spotify(
+async def search_spotify_track(
     query: str,
     type: str = "track",
     current_user: dict = Depends(authenticator.get_current_account_data),
