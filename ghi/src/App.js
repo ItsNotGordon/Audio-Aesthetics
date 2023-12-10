@@ -32,26 +32,11 @@ function App() {
       <AuthProvider baseUrl={baseUrl}>
         <Routes>
           <Route exact path="/test" element ={<SpotifyContainer baseUrl={baseUrl}/>}></Route>
-          <Route
-            exact
-            path="/"
-            element={<ExplorePage baseUrl={baseUrl} />}
-          ></Route>
-          <Route
-            exact
-            path="/signin"
-            element={<SignIn baseUrl={baseUrl} />}
-          ></Route>
-          <Route
-            exact
-            path="/logout"
-            element={<Logout baseUrl={baseUrl} />}
-          ></Route>
-          <Route
-            exact
-            path="/posts"
-            element={<Posts baseUrl={baseUrl} />}
-          ></Route>
+          <Route exact path="/test" element ={<SpotifyContainer baseUrl={baseUrl}/>}></Route>
+          <Route exact path="/" element={<ExplorePage baseUrl={baseUrl}/>}></Route>
+          <Route exact path="/signin" element={<SignIn baseUrl={baseUrl}/>}></Route>
+          <Route exact path="/logout" element={<Logout baseUrl={baseUrl}/>}></Route>
+          <Route exact path="/posts" element={<Posts baseUrl={baseUrl}/>}></Route>
           <Route
             exact
             path="/signup"
