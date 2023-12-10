@@ -26,8 +26,8 @@ const MySpotifyComponent = () => {
             {userDetails && userDetails.spotify_access_token && (
                 <SpotifyPlayer
                     token={userDetails.spotify_access_token}
-                    play={!!currentTrackUri}
                     uris={currentTrackUri ? [currentTrackUri] : []}
+                    play={true}
                 />
             )}
         </div>
