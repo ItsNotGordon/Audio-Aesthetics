@@ -14,7 +14,7 @@
 ## Audio Aesthetics was created, tested, and deployed with:
 
 [![Docker](https://img.shields.io/badge/Docker-6C757D?style=for-the-badge&logo=docker)](https://www.docker.com/)
-![Python](https://img.shields.io/badge/Python-6C757D?style=for-the-badge&logo=python)
+[![Python](https://img.shields.io/badge/Python-6C757D?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Git](https://img.shields.io/badge/Git-6C757D?style=for-the-badge&logo=git)](https://git-scm.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-6C757D?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-6C757D?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
