@@ -20,6 +20,7 @@ import Groups from "./Groups";
 import SpotifyPlayer from "./SpotifyPlayer";
 import CreateGroup from "./CreateGroup";
 import SpotifyContainer from "./SpotifyContainer";
+import ImageGeneratorForm from "./StableDiffusion/ImageGeneratorForm";
 
 function App() {
   const domain = /https:\/\/[^/]+/;
@@ -30,6 +31,7 @@ function App() {
     <BrowserRouter basename={basename}>
       <AuthProvider baseUrl={baseUrl}>
         <Routes>
+          <Route exact path="/aesthetics" element={<ImageGeneratorForm baseUrl={baseUrl} />}></Route>
           <Route exact path="/test" element={<SpotifyContainer baseUrl={baseUrl} />}></Route>
           <Route
             exact

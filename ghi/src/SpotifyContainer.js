@@ -3,6 +3,7 @@ import SpotifyPlayer from './SpotifyPlayer';
 import SongSearch from './SongSearch';
 import useUserDetails from './useUserDetails';
 import { Box, Grid, Card, CardContent, Typography } from '@mui/material';
+import NavBar from './NavBar';
 
 
 const SpotifyContainer = () => {
@@ -11,6 +12,10 @@ const SpotifyContainer = () => {
     const userDetails = useUserDetails();
     const token = userDetails?.spotify_access_token;
 
+    const [open, setOpen] = useState(true);
+    const toggleDrawer = () => {
+        setOpen(!open);
+    };
 
     const handleSearchResult = (tracks) => {
         setSearchResults(tracks)
@@ -22,6 +27,7 @@ const SpotifyContainer = () => {
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column'}}>
+            <NavBar open={open} toggleDrawer={toggleDrawer} />
             <SpotifyPlayer token={token} trackUri={trackUri} />
             <SongSearch onSearchResult={handleSearchResult} />
             <Grid container spacing={2} justifyContent="center">
