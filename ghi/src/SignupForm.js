@@ -22,9 +22,9 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <a href="https://gitlab.com/team-tunity/audio-aesthetics">
+      <Link color="inherit" to="/">
         Audio Aesthetics
-      </a>{" "}
+      </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
