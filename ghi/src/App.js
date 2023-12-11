@@ -32,7 +32,7 @@ function App() {
       <AuthProvider baseUrl={baseUrl}>
         <Routes>
           <Route exact path="/aesthetics" element={<ImageGeneratorForm baseUrl={baseUrl} />}></Route>
-          <Route exact path="/test" element={<SpotifyContainer baseUrl={baseUrl} />}></Route>
+          <Route exact path="/player" element={<SpotifyContainer baseUrl={baseUrl} />}></Route>
           <Route
             exact
             path="/"
@@ -89,11 +89,11 @@ function App() {
             path="/settings"
             element={<Settings baseUrl={baseUrl} />}
           ></Route>
-          <Route
+          {/* <Route
             exact
             path="/player"
             element={<SpotifyPlayer baseUrl={baseUrl} />}
-          ></Route>
+          ></Route> */}
           <Route
             exact
             path="/groups"
